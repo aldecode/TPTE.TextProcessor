@@ -3,7 +3,6 @@ import re
 
 import numpy as np
 from nltk import word_tokenize, sent_tokenize
-from sklearn.feature_extraction.text import CountVectorizer
 
 
 def get_bag_of_words(text: str):
@@ -22,8 +21,10 @@ def get_bag_of_words(text: str):
                 wordfreq[word] = 1
             else:
                 wordfreq[word] += 1
+
     wordfreq = heapq.nlargest(10, wordfreq, key=wordfreq.get)
     print("Top 10 frequent words: {}".format(wordfreq))
+
     # Building the Bag of Words model
     bow = []
     for sentence in sentences:

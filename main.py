@@ -23,7 +23,7 @@ if __name__ == '__main__':
     ukr_bag = bag_of_words.get_bag_of_words(ukr_text)
     print("Bag of Words for top frequent words per sentence:\n {}".format(ukr_bag))
 
-    # To many lems in text so i will take only top 10
+    # To many lems in text so, I will take only top 10
     ukr_encoding = oh_encoder.onehot_encode(ukr_tokens[:10])
     print("One Hot Encoding:\n{}".format(ukr_encoding))
 
@@ -44,6 +44,6 @@ if __name__ == '__main__':
     eng_bag = bag_of_words.get_bag_of_words(eng_text)
     print("Bag of Words for top frequent words per sentence:\n {}".format(eng_bag))
 
-    # To many lems in text so i will take only top 10.
+    # To many lems in text so, I will take only top 10.
     eng_encoding = oh_encoder.onehot_encode(eng_tokens[:10])
     print("One Hot Encoding:\n{}".format(eng_encoding))
